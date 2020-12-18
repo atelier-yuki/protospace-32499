@@ -1,7 +1,7 @@
 class PrototypesController < ApplicationController
   before_action :set_user, only: [:index, :show]
   before_action :set_prototype, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, only: [:new]
+  before_action :authenticate_user!, only: [:new, :edit]
   before_action :re_direct_toppage, only: [:edit, :update, :destroy]
 
   def index
